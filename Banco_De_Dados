@@ -1,0 +1,18 @@
+CREATE DATABASE forms;
+USE forms;
+
+CREATE TABLE Form (
+    ID_User int primary key auto_increment not null,
+    nome varchar (100) not null,
+    email varchar (100) not null,
+    data_nascimento date not null,
+    genero enum('Masculino', 'Feminino', 'Todes', 'Não Tem', 'Geladeira Eletrolux', 'Desafiante') not null,
+    biografia text
+);
+
+ALTER TABLE Form MODIFY genero ENUM('Masculino', 'Feminino', 'Todes', 'Não Tem', 'Geladeira Eletrolux', 'Desafiante', 'outros') NOT NULL;
+
+
+SELECT User, Host FROM mysql.user;
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'nova_senha';
